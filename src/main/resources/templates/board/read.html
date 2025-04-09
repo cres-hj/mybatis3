@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<!--
+  @{todo.content}의 내용이 "<span style='color-red;>자바<span>공부"일 때
+  내용을 적용해서 출력할거냐 아니면 html을 적용할거냐
+-->
+<!-- 이게 위의 전자 -->
+<h4>이미지를 글자로</h4>
+<div th:text="${content}"></div>
+<br>
+<!--이게 위쪽의 후자-->
+<h4>이미지를 이미지로</h4>
+<div th:utext="${content}"></div>
+</body>
+</html>
